@@ -20,12 +20,13 @@ ul li{
 }
 
 .section-nav{
-    display: none;
+    display: block;
     position: fixed;
-    height: 70vh;
+    height: 0vh;
     width: 95%;
     background-color: rgb(224, 224, 224);
     transform: translate(2%, -2%);
+    transition: all 0.3s ease;
 }
 
 #menu{
@@ -34,6 +35,8 @@ ul li{
 
 #menu:checked ~ .section-nav{
     display: block;
+    height: 70vh;
+    transition: all 0.3s ease;
 }
 
 /* по умолчанию показываем "menu", скрываем "end" */
