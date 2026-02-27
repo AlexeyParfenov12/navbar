@@ -1,0 +1,56 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.header-nav{
+    margin: 0 auto;
+}
+
+ul li{
+    margin: 0 15px;
+}
+
+.section-nav{
+    display: none;
+    position: fixed;
+    height: 70vh;
+    width: 95%;
+    background-color: rgb(224, 224, 224);
+    transform: translate(2%, -2%);
+}
+
+#menu{
+    display: none;
+}
+
+#menu:checked ~ .section-nav{
+    display: block;
+}
+
+/* по умолчанию показываем "menu", скрываем "end" */
+.menu{
+    display: block;
+}
+
+.end{
+    display: none;
+}
+
+/* когда чекбокс активен, скрываем "menu" и показываем "end" */
+#menu:checked ~ header .menu{
+    display: none;
+}
+
+#menu:checked ~ header .end{
+    display: block;
+}
+
